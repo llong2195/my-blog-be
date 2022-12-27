@@ -17,7 +17,7 @@ import {
 } from '@nestjs/common';
 import { PostService } from './post.service';
 import { PostDto } from './dto/post.dto';
-import { AuthGuard } from '../authorization/auth.guard';
+import { AuthGuard } from 'src/modules/authorization/auth.guard';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { UpdatePostDto } from './dto/update.post.dto';
 

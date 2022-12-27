@@ -1,7 +1,7 @@
 import { Body, Controller, Post, UseGuards } from '@nestjs/common';
 import { LikeService } from './like.service';
 import { LikeDto } from './dto/like.dto';
-import { AuthGuard } from '../authorization/auth.guard';
+import { AuthGuard } from 'src/modules/authorization/auth.guard';
 
 @Controller('likes')
 export class LikeController {

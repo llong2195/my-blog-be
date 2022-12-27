@@ -5,7 +5,7 @@ import { UserModule } from '../user/user.module';
 import { PostModule } from '../post/post.module';
 import { CommentService } from './comment.service';
 import { CommentController } from './comment.controller';
-import { AuthorizationModule } from '../authorization/auth.module';
+import { AuthorizationModule } from 'src/modules/authorization/auth.module';
 
 @Module({
   imports: [

@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import { TagService } from './tag.service';
 import { TagDto } from './dto/tag.dto';
-import { AuthGuard } from '../authorization/auth.guard';
+import { AuthGuard } from 'src/modules/authorization/auth.guard';
 
 @Controller('tags')
 export class TagController {

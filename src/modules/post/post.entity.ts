@@ -11,9 +11,10 @@ import { User } from '../user/user.entity';
 import { Comment } from '../comment/commnet.entity';
 import { Like } from '../like/like.entity';
 import { Tag } from '../tag/tag.entity';
+import { DateAudit } from 'src/util/date_audit.entity';
 
 @Entity({ name: 'posts' })
-export class Post {
+export class Post extends DateAudit {
   @PrimaryGeneratedColumn()
   id: number;
 

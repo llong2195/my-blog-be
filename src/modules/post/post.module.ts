@@ -4,7 +4,7 @@ import { Post } from './post.entity';
 import { UserModule } from '../user/user.module';
 import { PostService } from './post.service';
 import { PostController } from './post.controller';
-import { AuthorizationModule } from '../authorization/auth.module';
+import { AuthorizationModule } from 'src/modules/authorization/auth.module';
 import { FileService } from '../file/file.service';
 import { TagModule } from '../tag/tag.module';
 

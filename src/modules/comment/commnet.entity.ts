@@ -1,9 +1,10 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { User } from '../user/user.entity';
 import { Post } from '../post/post.entity';
+import { DateAudit } from 'src/util/date_audit.entity';
 
 @Entity({ name: 'comments' })
-export class Comment {
+export class Comment extends DateAudit {
   @PrimaryGeneratedColumn()
   id: number;
 

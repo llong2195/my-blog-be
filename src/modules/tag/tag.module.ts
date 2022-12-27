@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Tag } from './tag.entity';
 import { TagService } from './tag.service';
 import { TagController } from './tag.controller';
-import { AuthorizationModule } from '../authorization/auth.module';
+import { AuthorizationModule } from 'src/modules/authorization/auth.module';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Tag]), AuthorizationModule],

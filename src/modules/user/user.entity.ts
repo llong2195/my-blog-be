@@ -2,6 +2,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Post } from '../post/post.entity';
 import { Comment } from '../comment/commnet.entity';
 import { Like } from '../like/like.entity';
+import { DateAudit } from 'src/util/date_audit.entity';
 
 export enum UserRole {
   ADMIN = 'admin',
@@ -10,7 +11,7 @@ export enum UserRole {
 }
 
 @Entity({ name: 'users' })
-export class User {
+export class User extends DateAudit {
   @PrimaryGeneratedColumn()
   id: number;
 

@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common';
 import { CommentService } from './comment.service';
 import { CommentDto } from './dto/comment.dto';
-import { AuthGuard } from '../authorization/auth.guard';
+import { AuthGuard } from 'src/modules/authorization/auth.guard';
 
 @Controller('comments')
 @UseGuards(AuthGuard)

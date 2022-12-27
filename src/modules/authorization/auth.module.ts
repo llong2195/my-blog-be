@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
-import { TokenModule } from 'src/token/token.module';
-import { UserModule } from 'src/user/user.module';
 import { SecurityService } from './security.service';
 import { SecurityController } from './security.controller';
+import { TokenModule } from '../token/token.module';
+import { UserModule } from '../user/user.module';
 
 @Module({
   exports: [JwtModule],

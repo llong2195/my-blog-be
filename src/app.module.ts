@@ -2,21 +2,19 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
-import { UserModule } from './user/user.module';
-import { User } from './user/user.entity';
-import { PostModule } from './post/post.module';
-import { CommentModule } from './comment/comment.module';
-import { UserService } from './user/user.service';
-import { TokenModule } from './token/token.module';
-import { AuthorizationModule } from './authorization/auth.module';
-import { FileModule } from './file/file.module';
+import { AuthorizationModule } from './modules/authorization/auth.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
-import { LikeModule } from './like/like.module';
 import * as path from 'path';
-import { TagModule } from './tag/tag.module';
 import { APP_FILTER } from '@nestjs/core';
 import { AllExceptionFilter } from './filter/exception.filter';
 import { LoggerModule } from './logger/logger.module';
+import { UserModule } from './modules/user/user.module';
+import { CommentModule } from './modules/comment/comment.module';
+import { FileModule } from './modules/file/file.module';
+import { LikeModule } from './modules/like/like.module';
+import { PostModule } from './modules/post/post.module';
+import { TagModule } from './modules/tag/tag.module';
+import { TokenModule } from './modules/token/token.module';
 
 @Module({
   imports: [

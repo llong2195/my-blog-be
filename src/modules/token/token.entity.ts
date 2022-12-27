@@ -6,9 +6,10 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { User } from '../user/user.entity';
+import { DateAudit } from 'src/util/date_audit.entity';
 
 @Entity({ name: 'tokens' })
-export class Token {
+export class Token extends DateAudit {
   @PrimaryGeneratedColumn()
   id: number;
 
