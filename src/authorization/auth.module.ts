@@ -7,7 +7,13 @@ import { SecurityController } from './security.controller';
 
 @Module({
   exports: [JwtModule],
-  imports: [UserModule, TokenModule, AuthorizationModule, UserModule, JwtModule.register({})],
+  imports: [
+    UserModule,
+    TokenModule,
+    AuthorizationModule,
+    UserModule,
+    JwtModule.register({}),
+  ],
   providers: [SecurityService],
   controllers: [SecurityController],
 })

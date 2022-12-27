@@ -64,6 +64,10 @@ export class SecurityService {
     };
   }
 
+  async findRefreshToken(userId: number) {
+    return await this.tokenService.findRefreshTokenByUserId(userId);
+  }
+
   async logout(refreshToken: string) {
     await this.tokenService.removeToken(refreshToken);
   }

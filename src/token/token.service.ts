@@ -71,4 +71,14 @@ export class TokenService {
       { relations: ['user'] },
     );
   }
+
+  async findRefreshTokenByUserId(userId: number) {
+    return await this.tokenRepository.findOne({
+      where: {
+        user: {
+          id: userId,
+        },
+      },
+    });
+  }
 }
